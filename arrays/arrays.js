@@ -6,7 +6,6 @@
 //     let arraySum = arr.reduce((acc, curr) => acc + curr, 0)
 //     console.log("Missing Number: " + (totalSum - arraySum));
 // }
-
 // function missingNumberUsingXor(arr){ //? Why this is some what better is because it dosent over exceed the length of the arrays
 //     let n = arr.length;
 //     let xor1;
@@ -38,7 +37,6 @@
 //     }
 //     console.log("Number of consective one's are : " + max);
 // }
-
 // consecutiveOnes([1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0])
 
 

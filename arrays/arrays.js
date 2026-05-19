@@ -39,4 +39,13 @@
 // }
 // consecutiveOnes([1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0])
 
+//! Find the number that appears once in an array where every other number appears twice
 
+// function findSingleNumber(arr){
+//     let xor = 0;
+//     for(let i=0;i<arr.length;i++){
+//         xor = xor ^ arr[i];
+//     }
+//     console.log("The number that appears once is: " + xor);
+// }
+// findSingleNumber([1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8])

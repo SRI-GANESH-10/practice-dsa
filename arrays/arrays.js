@@ -49,3 +49,52 @@
 //     console.log("The number that appears once is: " + xor);
 // }
 // findSingleNumber([1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8])
+
+//! Find the longest sub array length with sum k;
+
+//TODO: This is onl for postivies with better solution which O(n) and O(1)
+function longestSubarrayPositivesWithSumK(arr, k){
+    let i = 0;
+    let maxLen = 0;
+    let sum = 0;
+    for(let j=0;j<arr.length;j++){
+        sum = sum + arr[j];
+        while(sum>k){
+            sum = sum - arr[i];
+            i++;
+        }
+        if(sum === k){
+            maxLen = j - i + 1 > maxLen ? j -i + 1 : maxLen;
+        }
+    }
+    console.log(maxLen)
+}
+
+//TODO: This is prefix and thehashmap one which works for negatives as well but takes extra map for it
+function longestSubarrayWithSumK(a, k) {
+    let map = new Map();
+    let maxLen = 0;
+    let sum = 0;
+
+    for (let j = 0; j < a.length; j++){
+        sum = sum + a[j];
+        
+        if (sum === k) {
+                maxLen = j + 1;
+        }
+        if (map.has(sum - k)) {
+            let newL = j - map.get(sum - k);
+            if (newL > maxLen) {
+                maxLen = newL;
+            }
+        }
+        if (!map.has(sum)) {
+            map.set(sum, j);
+        }
+
+    }
+    console.log(map , maxLen)
+}
+
+
+longestSubarrayPositivesWithSumK([1,1,1,1,1,0,0,0,0,3] , 3);

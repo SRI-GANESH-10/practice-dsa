@@ -138,34 +138,34 @@
 
 // twoSumHashSet([8, 4, 5, 7 , 6] , 14)
 
-//? Sort the array which has only 0's 1's and 2's in one pass and O(1) space
+//! Sort the array which has only 0's 1's and 2's in one pass and O(1) space
 //TODO : Duch National Flag Algorithm
-function swapInArray(arr , i, j){
-    let temp;
-    temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
-function sort012(arr){
-    let low = 0;
-    let mid = 0;
-    let high = arr.length - 1;
-    while(mid<high){
-        if(arr[mid] === 0){
-            swapInArray(arr, low , mid);
-            low++;
-            mid++;
-        }
-        else if(arr[mid] === 1){
-            mid++;
-        }
-        else{
-            swapInArray(arr, mid , high);
-            high--;
-        }
-    }
-    console.log(arr)
-}
+// function swapInArray(arr , i, j){
+//     let temp;
+//     temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+// }
+// function sort012(arr){
+//     let low = 0;
+//     let mid = 0;
+//     let high = arr.length - 1;
+//     while(mid<high){
+//         if(arr[mid] === 0){
+//             swapInArray(arr, low , mid);
+//             low++;
+//             mid++;
+//         }
+//         else if(arr[mid] === 1){
+//             mid++;
+//         }
+//         else{
+//             swapInArray(arr, mid , high);
+//             high--;
+//         }
+//     }
+//     console.log(arr)
+// }
 
-sort012([0,1,0,2,0,2,0,1,1,1,0,0,2,2]);
+// sort012([0,1,0,2,0,2,0,1,1,1,0,0,2,2]);
 

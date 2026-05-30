@@ -169,3 +169,28 @@
 
 // sort012([0,1,0,2,0,2,0,1,1,1,0,0,2,2]);
 
+//! Find the element that comes maximum and >n/2 times in an array
+//TODO: Boyer Moore's Voting Algorithm
+// function findLargestElement(arr){
+//     let ele = arr[0];
+//     let cnt = 1;
+//     let realCnt = 0;
+//     for(let i =1;i<arr.length;i++){
+//         if(cnt === 0){
+//             ele = arr[i];
+//             cnt = 1;
+//         }
+//         else if(arr[i] === ele){
+//             cnt++;
+//         }
+//         else{
+//             cnt--;    
+//         }
+//     }
+
+//     for(let i=0;i<arr.length;i++){
+//         if(arr[i]===ele) realCnt++;
+//     }
+//     console.log(realCnt > arr.length/2 ? ele : "N/A")
+// }
+// findLargestElement([1,2,3,1,2,2,2])

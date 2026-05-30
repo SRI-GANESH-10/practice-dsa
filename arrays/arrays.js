@@ -53,48 +53,88 @@
 //! Find the longest sub array length with sum k;
 
 //TODO: This is onl for postivies with better solution which O(n) and O(1)
-function longestSubarrayPositivesWithSumK(arr, k){
-    let i = 0;
-    let maxLen = 0;
-    let sum = 0;
-    for(let j=0;j<arr.length;j++){
-        sum = sum + arr[j];
-        while(sum>k){
-            sum = sum - arr[i];
-            i++;
-        }
-        if(sum === k){
-            maxLen = j - i + 1 > maxLen ? j -i + 1 : maxLen;
-        }
-    }
-    console.log(maxLen)
-}
-
+// function longestSubarrayPositivesWithSumK(arr, k){
+//     let i = 0;
+//     let maxLen = 0;
+//     let sum = 0;
+//     for(let j=0;j<arr.length;j++){
+//         sum = sum + arr[j];
+//         while(sum>k){
+//             sum = sum - arr[i];
+//             i++;
+//         }
+//         if(sum === k){
+//             maxLen = j - i + 1 > maxLen ? j -i + 1 : maxLen;
+//         }
+//     }
+//     console.log(maxLen)
+// }
 //TODO: This is prefix and thehashmap one which works for negatives as well but takes extra map for it
-function longestSubarrayWithSumK(a, k) {
-    let map = new Map();
-    let maxLen = 0;
-    let sum = 0;
+// function longestSubarrayWithSumK(a, k) {
+//     let map = new Map();
+//     let maxLen = 0;
+//     let sum = 0;
 
-    for (let j = 0; j < a.length; j++){
-        sum = sum + a[j];
+//     for (let j = 0; j < a.length; j++){
+//         sum = sum + a[j];
         
-        if (sum === k) {
-                maxLen = j + 1;
-        }
-        if (map.has(sum - k)) {
-            let newL = j - map.get(sum - k);
-            if (newL > maxLen) {
-                maxLen = newL;
-            }
-        }
-        if (!map.has(sum)) {
-            map.set(sum, j);
-        }
+//         if (sum === k) {
+//                 maxLen = j + 1;
+//         }
+//         if (map.has(sum - k)) {
+//             let newL = j - map.get(sum - k);
+//             if (newL > maxLen) {
+//                 maxLen = newL;
+//             }
+//         }
+//         if (!map.has(sum)) {
+//             map.set(sum, j);
+//         }
 
-    }
-    console.log(map , maxLen)
-}
+//     }
+//     console.log(map , maxLen)
+// }
+// longestSubarrayPositivesWithSumK([1,1,1,1,1,0,0,0,0,3] , 3);
 
+//! Find the 2 sum problem one with yes or no and the other with the indices of the numbers;
 
-longestSubarrayPositivesWithSumK([1,1,1,1,1,0,0,0,0,3] , 3);
+//TODO : This is the one with yes or no and it works for unsorted arrays as well
+// function twoSumYesOrNo(arr, n){
+//     arr.sort();
+//     console.log(arr)
+//     let l = 0;
+//     let r = arr.length-1;
+//     while(l<r){
+//         let sum = arr[l] + arr[r]
+//         if(sum === n){
+//             console.log("Yes");
+//             return;
+//         }
+//         else if(sum < n){
+//             l++;
+//         }
+//         else{
+//             r--;
+//         }
+//     }
+//     console.log("No");
+// }
+
+//TODO: hashset Wala map
+// function twoSumHashSet(arr, n){
+//     let map = new Map();
+//     for(let i=0;i<arr.length;i++){
+//         let num2 = n - arr[i];
+//         if(map.has(num2)){
+//             console.log([i , map.get(num2)])
+//             return;
+//         }
+//         else{
+//             map.set(arr[i] , i);
+//         }
+//         console.log(map)
+//     }
+// }
+
+// twoSumHashSet([8, 4, 5, 7 , 6] , 14)
+

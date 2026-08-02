@@ -49,3 +49,49 @@
 //     console.log("The number that appears once is: " + xor);
 // }
 // findSingleNumber([1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8])
+
+
+//! Find the longest sub array with given sum if only positives are there...
+// function longestSubarray(arr, k) {
+//     let left = 0;
+//     let sum = 0;
+//     let maxLen = 0;
+
+//     for (let right = 0; right < arr.length; right++) {
+//         sum += arr[right];
+
+//         while (sum > k) {
+//             sum -= arr[left];
+//             left++;
+//         }
+
+//         if (sum === k) {
+//             maxLen = Math.max(maxLen, right - left + 1);
+//         }
+//     }
+
+//     return maxLen;
+// }
+// console.log(longestSubarray([1,2,3,1,1,1,1,4,2,3] , 3))
+
+//TODO - For 0s and negatives
+// function longestSubArr (arr, k){
+//     let hashMap = new Map();
+//     let sum = 0;
+//     let maxLen = 0;
+//     for(let i=0; i<arr.length;i++){
+//         sum = sum + arr[i];
+
+//         if (sum === k) {
+//             maxLen = i + 1;
+//         }
+//         if(hashMap.has(sum - k)){
+//             maxLen = Math.max(i - hashMap.get(sum - k), maxLen);
+//         }
+//         if(!hashMap.has(sum)){
+//             hashMap.set(sum,i);
+//         }
+//     }
+//     return maxLen;
+// }
+// console.log(longestSubArr([5,1,2], 3));

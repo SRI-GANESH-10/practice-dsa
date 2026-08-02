@@ -95,3 +95,17 @@
 //     return maxLen;
 // }
 // console.log(longestSubArr([5,1,2], 3));
+
+//! Find teh indices of the two numbers in an array with the given target
+// function twoIndices(arr, k) {
+//     let hashMap = new Map();
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (hashMap.has(k - arr[i])) {
+//             return [hashMap.get(k - arr[i]), i];
+//         }
+
+//         hashMap.set(arr[i], i);
+//     }
+// }
+// console.log(twoIndices([1,2,3,4,5,6], 7));

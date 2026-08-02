@@ -109,3 +109,34 @@
 //     }
 // }
 // console.log(twoIndices([1,2,3,4,5,6], 7));
+
+//! Sorts the array containng 0,1,2 with optimal way - Dutch National Flag Algo
+// function swapInArr(arr, i , j){
+//     let temp;
+//     temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//     return arr;
+// }
+// function sortTheArr(arr){
+//     let low = 0;
+//     let mid = 0;
+//     let high = arr.length-1;
+//     while(mid<=high){
+//         if(arr[mid] === 0){
+//             swapInArr(arr , low , mid);
+//             low++;
+//             mid++;
+//         }
+//         else if(arr[mid] === 1){
+//             mid++;
+//         }
+//         else if(arr[mid] === 2){
+//             swapInArr(arr , mid , high);
+//             high--;
+//         }
+//     }
+//     return arr
+// }
+
+// console.log(sortTheArr([0,2,1,2,1,0,0,0,1,2,1,2]))

@@ -196,3 +196,20 @@
 // }   
 
 // console.log(maxSubArray([-2,-3,4,-2,-1,1,5,-3]))
+
+//! Buy and sell the stock 
+function buyNdSellStock(arr){
+    let min = arr[0]
+    let profit = -Infinity;
+    for(let i = 1;i<arr.length;i++){
+        let num = arr[i];
+        if(num - min >0){
+            profit = Math.max(num - min , profit);
+        }
+        if(arr[i]<min){
+            min = arr[i]
+        }
+    }
+    return profit;
+}
+console.log(buyNdSellStock([7,1,2,3,6]))

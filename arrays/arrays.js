@@ -140,3 +140,35 @@
 // }
 
 // console.log(sortTheArr([0,2,1,2,1,0,0,0,1,2,1,2]))
+
+//! Find the number that is occuring more than n/2 times in an array - Moore's Voting Algo
+// function majorityElement(nums) {
+//     let candidate;
+//     let count = 0;
+
+//     // Step 1: Find the candidate
+//     for (const num of nums) {
+//         if (count === 0) {
+//             candidate = num;
+//         }
+
+//         if (num === candidate) {
+//             count++;
+//         } else {
+//             count--;
+//         }
+//     }
+
+//     // Step 2: Verify the candidate
+//     let frequency = 0;
+
+//     for (const num of nums) {
+//         if (num === candidate) {
+//             frequency++;
+//         }
+//     }
+
+//     return frequency > nums.length / 2 ? candidate : -1;
+// }
+
+// console.log(majorityElement([7,7,7,5,5,2,1,2,5,5,5,5,5,5,5]));

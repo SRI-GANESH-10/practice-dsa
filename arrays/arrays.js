@@ -198,18 +198,73 @@
 // console.log(maxSubArray([-2,-3,4,-2,-1,1,5,-3]))
 
 //! Buy and sell the stock 
-function buyNdSellStock(arr){
-    let min = arr[0]
-    let profit = -Infinity;
-    for(let i = 1;i<arr.length;i++){
-        let num = arr[i];
-        if(num - min >0){
-            profit = Math.max(num - min , profit);
-        }
-        if(arr[i]<min){
-            min = arr[i]
-        }
-    }
-    return profit;
-}
-console.log(buyNdSellStock([7,1,2,3,6]))
+// function buyNdSellStock(arr){
+//     let min = arr[0]
+//     let profit = -Infinity;
+//     for(let i = 1;i<arr.length;i++){
+//         let num = arr[i];
+//         if(num - min >0){
+//             profit = Math.max(num - min , profit);
+//         }
+//         if(arr[i]<min){
+//             min = arr[i]
+//         }
+//     }
+//     return profit;
+// }
+// console.log(buyNdSellStock([7,1,2,3,6]))
+
+// //! Rearrange the elements of the arrays starts from positives and alternates with negatives
+// function rearrangeElements(arr){
+//     let ans = [];
+//     let even = 0;
+//     let odd = 1;
+//     for(const element of arr){
+//         if(element > 0){
+//             ans[even] = element
+//             even<arr.length ? even+=2 : even+=1;
+//         }
+//         else{
+//             ans[odd]= element;
+//             odd<arr.length ? odd+=2 : odd+=1;
+//         }
+//     }
+
+//     return ans
+// }
+
+// console.log(rearrangeElements([3,1,-2,2,3,-5,2,-4]));
+
+// //TODO - WHen There are non equal number of elements
+// function rearrangeElementsWithNonEquals(arr) {
+//     let positives = [];
+//     let negatives = [];
+
+//     for (const num of arr) {
+//         if (num >= 0) {
+//             positives.push(num);
+//         } else {
+//             negatives.push(num);
+//         }
+//     }
+
+//     let result = [];
+//     let i = 0, j = 0;
+
+//     while (i < positives.length && j < negatives.length) {
+//         result.push(positives[i++]);
+//         result.push(negatives[j++]);
+//     }
+
+//     while (i < positives.length) {
+//         result.push(positives[i++]);
+//     }
+
+//     while (j < negatives.length) {
+//         result.push(negatives[j++]);
+//     }
+
+//     return result;
+// }
+
+// console.log(rearrangeElements([1,2,3,-1,-2]));

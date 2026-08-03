@@ -172,3 +172,27 @@
 // }
 
 // console.log(majorityElement([7,7,7,5,5,2,1,2,5,5,5,5,5,5,5]));
+
+//! Find the maximum sum of sub array and the array as well
+// function maxSubArray(arr){
+//     let maxSum = -Infinity;
+//     let sum = 0;
+//     let start, end, st;
+//     for(let i=0;i<arr.length;i++){
+//         if(sum === 0) st = i;
+//          sum = sum + arr[i];
+//         if(sum>maxSum){
+//             maxSum = sum;
+//             start = st ;
+//             end = i
+//         }
+//         if(sum<0){
+//             sum = 0
+//         }
+//     }
+
+//     const res = arr.slice(start , end + 1)
+//     return { maxSum , res}
+// }   
+
+// console.log(maxSubArray([-2,-3,4,-2,-1,1,5,-3]))

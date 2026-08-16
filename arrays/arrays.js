@@ -268,3 +268,52 @@
 // }
 
 // console.log(rearrangeElements([1,2,3,-1,-2]));
+
+// //! Find the next greater permutation of the given array
+// const swapInArr = (arr , i , j) =>{
+//     let temp= arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//     return arr;
+// }
+// const nextGreaterPermutaion = (arr) => {
+//     let index= -1;
+//     let maxIndex;
+//     //Find the break point from the right where there will be a dip of the value to get the break point
+//     let n = arr.length;
+//     for(let i=n-2;i>=0;i--){
+//         if(arr[i] < arr[i+1]){
+//             index = i;
+//             break
+//         }
+//     }
+
+//     if(index === -1){
+//         return arr.reverse();
+//     }
+
+//     // After finding the brak now find the greater number than that one from right so that we can get grater one but smaller than remaining others
+//     for(let j=n-1;j>=index;j--){
+//         if(arr[j] > arr[index]){
+//             maxIndex = j;
+//             break;
+//         }
+//     }
+
+//     swapInArr(arr, index , maxIndex);
+
+//     // So after swapping since we get the next array mostly in descending order just reviser it is fine
+//     let left = index + 1;
+//     let right = n - 1;
+
+//     while (left < right) {
+//         swapInArr(arr, left, right);
+//         left++;
+//         right--;
+//     }
+
+//     return arr;
+// }
+// console.log(nextGreaterPermutaion([2,1,5,4,3,0,0]))
+
+

@@ -316,4 +316,29 @@
 // }
 // console.log(nextGreaterPermutaion([2,1,5,4,3,0,0]))
 
+//! Find the leaders in the array
+// const leadersInArr = (arr, order) => {
+
+//     let n = arr.length;
+//     let leaders = [];
+
+//     let currentMax = arr[n-1]
+//     leaders.push(arr[n-1]);
+
+//     for(let i=n-2;i>=0;i--){
+//         if(arr[i] > currentMax){
+//             leaders.push(arr[i]);
+//             currentMax = arr[i];
+//         }
+//     }
+
+//     if(order === 'asc'){
+//         return leaders;
+//     }
+//     else{
+//         return leaders.reverse();
+//     }
+// }
+// console.log(leadersInArr([10,22,12,3,0,6] , 'desc'))
+
 

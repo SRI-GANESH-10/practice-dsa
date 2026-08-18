@@ -341,4 +341,31 @@
 // }
 // console.log(leadersInArr([10,22,12,3,0,6] , 'desc'))
 
+//! Longest Consecutive Sequence 
+// const consecutiveLongestArr = (arr) =>{
 
+//     let longestlen = 1;
+//     const newSet = new Set(arr);
+
+//     for(let num of newSet){
+//         let curr = num;
+//         if(newSet.has(num-1)){
+//             continue;
+//         }
+//         else{
+//             let temp = 0;
+//             while(newSet.has(curr)){
+//                 temp++;
+//                 if(longestlen<temp){
+//                     longestlen = temp;
+//                 }
+//                 curr++;
+//             }
+//         }
+//     }
+
+//     return longestlen
+
+// }
+
+// console.log(consecutiveLongestArr([102, 4, 100, 1, 101, 3, 2, 1, 1]))

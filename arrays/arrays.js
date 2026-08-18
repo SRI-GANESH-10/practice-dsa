@@ -369,3 +369,129 @@
 // }
 
 // console.log(consecutiveLongestArr([102, 4, 100, 1, 101, 3, 2, 1, 1]))
+
+//! Set matrix zeroes - If any element is 0 then make the entire row and column 0
+
+// const setZerosBruteForce = (arr) => {
+
+//     const markRow = (row) => {
+//         for (let i = 0; i < colLength; i++) {
+//             if (arr[row][i] !== 0) {
+//                 arr[row][i] = -1;
+//             }
+//         }
+//     }
+
+//     const markCol = (col) => {
+//         for (let i = 0; i < rowLenth; i++) {
+//             if (arr[i][col] !== 0) {
+//                 arr[i][col] = -1;
+//             }
+//         }
+//     }
+//     let rowLenth = arr.length;
+//     let colLength = arr[0].length;
+//     for (let i = 0; i < rowLenth; i++) {
+//         for (let j = 0; j < colLength; j++) {
+//             if (arr[i][j] === 0) {
+//                 markRow(i);
+//                 markCol(j)
+//             }
+//         }
+//     }
+
+//     for (let i = 0; i < rowLenth; i++) {
+//         for (let j = 0; j < colLength; j++) {
+//             if (arr[i][j] === -1) {
+//                 arr[i][j] = 0;
+//             }
+//         }
+//     }
+
+//     console.log(arr)
+// }
+
+// const setZerosBetterSol = (arr) => {
+
+
+
+//     let rowLenth = arr.length;
+//     let colLength = arr[0].length;
+
+//     let rowArr = new Array(rowLenth).fill(0);
+//     let colArr = new Array(colLength).fill(0);
+
+
+//     for (let i = 0; i < rowLenth; i++) {
+//         for (let j = 0; j < colLength; j++) {
+//             if (arr[i][j] === 0) {
+//                 rowArr[i] = 1;
+//                 colArr[j] = 1
+//             }
+//         }
+//     }
+//     // console.log(rowArr , colArr);
+
+//     for (let i = 0; i < rowLenth; i++) {
+//         for (let j = 0; j < colLength; j++) {
+//             if (rowArr[i] === 1 || colArr[j] === 1) {
+//                 arr[i][j] = 0;
+//             }
+//         }
+//     }
+
+//     console.log(arr)
+
+// }
+
+// const setZerosOptimal = (arr) => {
+//     let col0 = 1;
+
+//     let rowLenth = arr.length;
+//     let colLength = arr[0].length;
+//     for (let i = 0; i < rowLenth; i++) {
+//         for (let j = 0; j < colLength; j++) {
+//             if (arr[i][j] === 0) {
+//                 if (j === 0) {
+//                     col0 = 0;        
+//                 } else {
+//                     arr[0][j] = 0; 
+//                 }
+//                 if (i !== 0) {
+//                     arr[i][0] = 0;  
+//                 }
+//             }
+//         }
+//     }
+
+//     for (let i = 1; i < rowLenth; i++) {
+//         for (let j = 1; j < colLength; j++) {
+//             if (arr[0][j] === 0 || arr[i][0] === 0) {
+//                 arr[i][j] = 0;
+//             }
+//         }
+//     }
+
+//     let zeroFirstRow = arr[0][0] === 0;
+
+//     if (col0 === 0) {
+//         for (let j = 0; j < rowLenth; j++) {
+//             arr[j][0] = 0;
+//         }
+//     }
+
+//     if (zeroFirstRow) {
+//         for (let j = 0; j < colLength; j++) {
+//             arr[0][j] = 0;
+//         }
+//     }
+
+
+
+//     console.log(arr)
+// }
+
+// setZeros([[1,1,1,1], [1,0,1,1], [1,1,0,1], [1,0,0,1]])
+// setZerosBetterSol([[1,1,1,1], [1,0,1,1], [1,1,0,1], [1,0,0,1]])
+// setZerosOptimal([[1, 1, 1, 1], [1, 0, 1, 1], [1, 1, 0, 1], [0, 0, 0, 1]])
+

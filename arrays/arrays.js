@@ -566,3 +566,26 @@
 //     [13, 14, 15, 16]
 // ]))
 
+//! Count Subarray sum eqiuals k
+// const countSubarraySumEqualsK = (arr, k) => {
+//     let count = 0; // ✅ start at 0
+//     let prefixSum = 0;
+//     let map = new Map();
+//     map.set(0, 1); // base case — empty subarray has sum 0
+
+//     for (const element of arr) {
+//         prefixSum += element;
+
+//         // If prefixSum - k exists in map → subarrays found
+//         if (map.has(prefixSum - k)) {
+//             count += map.get(prefixSum - k); // ✅ add frequency not just 1
+//         }
+
+//         // Always update map — whether or not prefixSum-k was found
+//         map.set(prefixSum, (map.get(prefixSum) || 0) + 1); // ✅ increment frequency
+//     }
+
+//     console.log(map, count);
+// }
+// countSubarraySumEqualsK([1,2,3,-3,1,1,1,4,2,3] , 3)
+

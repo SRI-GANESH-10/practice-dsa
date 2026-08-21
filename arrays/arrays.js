@@ -625,3 +625,59 @@
 // console.log(printTargetInTraingle(4, 2)) // Output: 6 Column and Row
 // console.log(printnthRow(4)) // Nth Row
 // console.log(printPascalTriangle(5)) // Complete Triangle
+
+//! Find the array of numbes which occurs more than n/3 times in an array - Moore's Voting Algo
+
+// const majorityElementNBy3 = (arr) =>{
+//     console.log(arr)
+//     let cnt1=0;
+//     let cnt2 = 0;
+//     let ele1
+//     let ele2;
+//     let res = []
+//     for(let element of arr){
+//         if(cnt1 === 0 && ele2 !== element){
+//             cnt1 = 1;
+//             ele1 = element
+//         }
+//         else if(cnt2 === 0 && ele1 !== element){
+//             cnt2 = 1;
+//             ele2 = element
+//         }
+//         else if(ele1 === element){
+//             cnt1++;
+//         }
+//         else if(ele2 === element){
+//             cnt2++
+//         }
+//         else{
+//             cnt1--;
+//             cnt2--;
+//         }
+//     }
+
+//     console.log(ele1 , ele2)
+    
+//     cnt1=0;
+//     cnt2 = 0;
+
+//     for(let element of arr){
+//         if(element === ele1){
+//             cnt1++;
+//         }
+//         else if (element === ele2){
+//             cnt2++;
+//         }
+//     }
+
+//     let floorNum = Math.floor(arr.length/3)
+//     if(cnt1>floorNum){
+//         res.push(ele1);
+//     }
+//     if(cnt2 > floorNum){
+//         res.push(ele2)
+//     }
+
+//     return res
+// }
+// console.log(majorityElementNBy3([2,2,1,2,1,1,3,1,2]))

@@ -495,3 +495,29 @@
 // setZerosBetterSol([[1,1,1,1], [1,0,1,1], [1,1,0,1], [1,0,0,1]])
 // setZerosOptimal([[1, 1, 1, 1], [1, 0, 1, 1], [1, 1, 0, 1], [0, 0, 0, 1]])
 
+//! Rotate Matrix by 90 degree
+
+// const swapInArr = (matrix , i , j) =>{
+//     let temp = matrix[i][j];
+//     matrix[i][j] = matrix[j][i];
+//     matrix[j][i] = temp;
+// }
+// const rotateMatrix90 = (matrix) => {
+
+//     for(let i=1;i<matrix.length;i++){
+//         for(let j=0;j<i;j++){
+//             swapInArr(matrix , i , j)
+//         }
+//     }
+//     for(let k=0;k<matrix.length;k++){
+//         matrix[k] = matrix[k].reverse();
+//     }
+//     console.log(matrix)
+// }
+
+// rotateMatrix90([
+//   [1, 2, 3, 4],
+//   [5, 6, 7, 8],
+//   [9, 10, 11, 12],
+//   [13, 14, 15, 16]
+// ])

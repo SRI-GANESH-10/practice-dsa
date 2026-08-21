@@ -589,3 +589,39 @@
 // }
 // countSubarraySumEqualsK([1,2,3,-3,1,1,1,4,2,3] , 3)
 
+//! Pascal triangle - 3 Types of problems - 1. Print the triangle 2. Print the nth row 3. Print the kth element of nth row
+
+// const nCrFunction = (n , r) => {
+//     let res = 1;
+//     for(let i=0;i<r;i++){
+//         res = res * (n-i)
+//         res = res / (i + 1);
+//     }
+//     return res;
+// }
+
+
+// const printTargetInTraingle = (row, col) => {
+//     return nCrFunction(row, col)
+// }
+
+// const printnthRow = (n) =>{
+//     let row = [1];
+//     let ans = 1;
+//     for(let i=1;i<=n;i++){
+//         ans = ans * ((n-i+1)/i)
+//         row.push(ans)
+//     }
+//     return row
+// }
+
+// const printPascalTriangle = (n) =>{
+//     let row = [];
+//     for(let i =0;i<n;i++){
+//      row.push(printnthRow(i))
+//     }
+//     return row;
+// }
+// console.log(printTargetInTraingle(4, 2)) // Output: 6 Column and Row
+// console.log(printnthRow(4)) // Nth Row
+// console.log(printPascalTriangle(5)) // Complete Triangle

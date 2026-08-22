@@ -712,3 +712,37 @@
 //     return res
 // }
 // console.log(threeSumProblem([-2,1,0,2,2,1,0,-4,-1,-3]))
+
+//! Find the quads whose sum is equal to the target - 4 Sum Problem
+
+// const fourSumProblem = (arr, target) => {
+//     let res = []
+//     arr.sort((a,b)=>a-b);
+//     for(let i=0;i<arr.length;i++){
+//         if(i>0 && arr[i] === arr[i-1]) continue;
+//         for(let j=i+1;j<arr.length;j++){
+//             if(j!==i+1 && arr[j] === arr[j-1]) continue;
+//             let k = j+1;
+//             let l = arr.length -1;
+//             while(k<l){
+//                 let sum = arr[i]+arr[j]+arr[k]+arr[l];
+//                 if(sum>target){
+//                     l--;
+//                 }
+//                 else if(sum<target){
+//                     k++;
+//                 }
+//                 else{
+//                     res.push([arr[i], arr[j], arr[k] , arr[l]])
+//                     l--;
+//                     k++;
+//                     while(k<l && arr[k] === arr[k-1]) k++;
+//                     while(k<l && arr[l] === arr[l+1]) l--;
+//                 }
+//             }
+//         }
+//     }
+//     return res
+// }
+
+// console.log(fourSumProblem([1,2,2,3,4,5] , 8))

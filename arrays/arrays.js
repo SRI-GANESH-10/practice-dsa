@@ -746,3 +746,24 @@
 // }
 
 // console.log(fourSumProblem([1,2,2,3,4,5] , 8))
+
+//! Find the count of sub arrays with XOR equal to k
+
+// const findCount = (arr, target) => {
+
+//     const hashMap = new Map();
+//     let prefixXor=0;
+//     let count=0;
+//     hashMap.set(0, 1)
+//     for(let i=0;i<arr.length;i++){
+//         prefixXor = prefixXor ^ arr[i];
+//         let x = prefixXor ^ target;
+//         if(hashMap.has(x)){
+//             count += hashMap.get(x)
+//         }
+//         hashMap.set(prefixXor , (hashMap.get(prefixXor) || 0)+1)
+//     }
+//     console.log(hashMap , count)
+// }
+
+// console.log(findCount([4,2,2,6,4] , 6))

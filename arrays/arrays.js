@@ -767,3 +767,22 @@
 // }
 
 // console.log(findCount([4,2,2,6,4] , 6))
+
+//! Find the overlap of the arrays 
+
+// const findOverlappedRegions = (arr) =>{
+//     let res = [];
+//     for(let i=0;i<arr.length;i++){
+//         if(res.length === 0 || res[res.length-1][1] < arr[i][0]){
+//             res.push(arr[i])
+//         }
+//         else{
+//             res[res.length-1][1] = Math.max(res[res.length-1][1],arr[i][1])
+//         }
+//     }
+//     return res
+// }
+
+// console.log(findOverlappedRegions([[1,3], [2,6], [8,9], [9,11], [8,10], [2,4], [15,18], [16,17]]))
+
+

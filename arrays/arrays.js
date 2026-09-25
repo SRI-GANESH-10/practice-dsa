@@ -785,4 +785,11 @@
 
 // console.log(findOverlappedRegions([[1,3], [2,6], [8,9], [9,11], [8,10], [2,4], [15,18], [16,17]]))
 
+//! Merge the two sorted arrays without using extra space
+
+// const mergeTwoArraysandSort = () =>{
+//     juiiiuiuj
+// }
+
+// console.log(mergeTwoArraysandSort([1,3,5,7], [0,2,6,8,9]))
 

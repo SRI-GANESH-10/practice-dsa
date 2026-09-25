@@ -793,3 +793,30 @@
 
 // console.log(mergeTwoArraysandSort([1,3,5,7], [0,2,6,8,9]))
 
+//! Find the repeating and missing number in an array
+// const findMissingAndRepeatingNumber = (arr) => {
+//   const n = arr.length;
+//   const expectedSum = (n * (n + 1)) / 2;
+//   const expectedSqSum = (n * (n + 1) * (2 * n + 1)) / 6;
+
+//   let sum = 0;
+//   let sqSum = 0;
+//   for (let i = 0; i < n; i++) {
+//     sum += arr[i];
+//     sqSum += arr[i] * arr[i];
+//   }
+
+//   const diff = expectedSum - sum;          // missing - repeating
+//   const sqDiff = expectedSqSum - sqSum;    // missing² - repeating²
+//   const total = sqDiff / diff;             // missing + repeating
+
+//   const missing = (diff + total) / 2;
+//   const repeating = total - missing;
+
+//   return {
+//     "Missing Number": missing,
+//     "Repeating Number": repeating
+//   };
+// };
+
+// console.log(findMissingAndRepeatingNumber([4, 6, 2, 3, 1, 1]));
